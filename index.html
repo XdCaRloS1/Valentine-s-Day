@@ -15,9 +15,9 @@ body::before {
 	display: none;
 }
 .certificate {
-	background: #fff;
-	background-image: url('theCertificate.png');
-	box-shadow: 0 0 5px #888;
+	
+
+	
 }
 .benefits {
 	background: #fff;
@@ -28,7 +28,10 @@ body::before {
 	background-image: url('broken.png');
 }
 .yes {
-	background-image: url('colors.png');
+	background-image: url('theCertificate.png');
+	background-size: auto;
+	
+	background-repeat: no-repeat;
 }
 .maybe {
 	background-image: url('clock.png');
@@ -50,24 +53,24 @@ body::before {
 		    image = $("#image");
 		body.removeClass("no").removeClass("maybe")
 		image.removeClass("benefits").removeClass("certificate")
-		var answer = prompt("Will you be my valentine? Yes, No, Maybe?").toLowerCase()
+		var answer = prompt("Vrei sa iesi cu mn de valentines day??hihi Da ,nu,poate????").toLowerCase()
 /* .toLowerCase IS BEST PRACTICE! IT'S ALSO OK IF YOU TYPE THE FIRST LETTER INSTEAD OF THE WORD! */
-		if (answer == "yes" || answer == 'y') {
+		if (answer == "da" || answer == 'd') {
 			body.addClass("yes")
 			image.addClass("certificate")
-		} else if (answer == "maybe" || answer == 'm') {
+		} else if (answer == "poate" || answer == 'p') {
 			body.addClass("maybe")
 /* I WANTED THE BG TO CHANGE BEFORE THE ALERT AND THE IMAGE AFTER THE PROMPT AND THE NEXT PROMPT AFTER THAT! I LEARNED THAT IF ALERT AD IMAGE ARE NOT IN THE setTimeout TOGETHER, IT DOES THEM AT THE SAME TIME. */
 			setTimeout(beardedBoo, 6000)
 			setTimeout(function() {
-				alert("Perhaps you are not aware of the many benefits")
+				alert("Poate ca ai uitat ce bunok is ")
 				image.addClass("benefits")
 			}, 200)
 /* HEY!!! */
 		} else {
 			body.addClass("no")
 			setTimeout(function() {
-				alert("Say it isn't so. Please try again.")
+				alert("Sa nu crezi ca era atat de usor.")
 				beardedBoo()
 			}, 200)
 		}
